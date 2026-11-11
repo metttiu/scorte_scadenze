@@ -1,0 +1,300 @@
+{
+  "title": "Scorte e Scadenze",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Scorte e Scadenze",
+        "description": "Imposta notifiche e lista della spesa. Promemoria e prodotti si aggiungono dalla card o da \"Configura\".",
+        "data": {
+          "notify_targets": "Destinatari notifiche",
+          "notify_time": "Ora del riepilogo giornaliero",
+          "shopping_enabled": "Aggiungi alla lista della spesa i prodotti sotto soglia",
+          "shopping_list": "Lista della spesa"
+        },
+        "data_description": {
+          "notify_targets": "Uno per riga: servizi (es. notify.mobile_app_telefono, notify.telegram) o entità notify. Vuoto = nessuna notifica.",
+          "notify_time": "A quest'ora arriva un unico messaggio con tutto ciò che va gestito. Le cose urgenti (scadute oggi, esaurite) arrivano subito, fino alle 22.",
+          "shopping_list": "Entità todo in cui aggiungere i prodotti. Vengono tolti in automatico quando registri l'acquisto."
+        }
+      }
+    },
+    "abort": {
+      "single_instance_allowed": "Scorte e Scadenze è già configurata."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Scorte e Scadenze",
+        "menu_options": {
+          "aggiungi_scadenza": "Aggiungi promemoria ricorrente",
+          "aggiungi_singola": "Aggiungi scadenza singola",
+          "aggiungi_scorta": "Aggiungi prodotto",
+          "modifica": "Modifica",
+          "elimina": "Elimina",
+          "impostazioni": "Notifiche e lista della spesa"
+        }
+      },
+      "impostazioni": {
+        "title": "Notifiche e lista della spesa",
+        "data": {
+          "notify_targets": "Destinatari notifiche",
+          "notify_time": "Ora del riepilogo giornaliero",
+          "shopping_enabled": "Aggiungi alla lista della spesa i prodotti sotto soglia",
+          "shopping_list": "Lista della spesa"
+        },
+        "data_description": {
+          "notify_targets": "Uno per riga: servizi (es. notify.mobile_app_telefono, notify.telegram) o entità notify. Vuoto = nessuna notifica.",
+          "notify_time": "A quest'ora arriva un unico messaggio con tutto ciò che va gestito. Le cose urgenti (scadute oggi, esaurite) arrivano subito, fino alle 22.",
+          "shopping_list": "Entità todo in cui aggiungere i prodotti. Vengono tolti in automatico quando registri l'acquisto."
+        }
+      },
+      "aggiungi_scadenza": {
+        "title": "Nuovo promemoria ricorrente",
+        "data": {
+          "name": "Nome",
+          "interval": "Ogni",
+          "interval_unit": "Unità",
+          "last_done": "Ultima volta fatto",
+          "preavviso": "Preavviso",
+          "linked_stock": "Scala dal prodotto",
+          "linked_qty": "Quantità da scalare",
+          "icon": "Icona"
+        },
+        "data_description": {
+          "preavviso": "Giorni prima della scadenza in cui iniziare a ricordarlo (0 = il giorno stesso).",
+          "linked_stock": "Quando lo segni come fatto, scala automaticamente da questo prodotto (es. filtri di ricambio)."
+        }
+      },
+      "modifica_scadenza": {
+        "title": "Modifica {nome}",
+        "data": {
+          "name": "Nome",
+          "interval": "Ogni",
+          "interval_unit": "Unità",
+          "last_done": "Ultima volta fatto",
+          "preavviso": "Preavviso",
+          "linked_stock": "Scala dal prodotto",
+          "linked_qty": "Quantità da scalare",
+          "icon": "Icona"
+        },
+        "data_description": {
+          "preavviso": "Giorni prima della scadenza in cui iniziare a ricordarlo (0 = il giorno stesso).",
+          "linked_stock": "Quando lo segni come fatto, scala automaticamente da questo prodotto (es. filtri di ricambio)."
+        }
+      },
+      "aggiungi_singola": {
+        "title": "Nuova scadenza singola",
+        "data": {
+          "name": "Nome",
+          "data_scadenza": "Data di scadenza",
+          "preavviso": "Preavviso",
+          "icon": "Icona"
+        },
+        "data_description": {
+          "preavviso": "Giorni prima in cui iniziare a ricordarlo. Una volta segnata come fatta, la scadenza viene eliminata."
+        }
+      },
+      "modifica_singola": {
+        "title": "Modifica {nome}",
+        "data": {
+          "name": "Nome",
+          "data_scadenza": "Data di scadenza",
+          "preavviso": "Preavviso",
+          "icon": "Icona"
+        },
+        "data_description": {
+          "preavviso": "Giorni prima in cui iniziare a ricordarlo. Una volta segnata come fatta, la scadenza viene eliminata."
+        }
+      },
+      "aggiungi_scorta": {
+        "title": "Nuovo prodotto",
+        "data": {
+          "name": "Nome",
+          "mode": "Calcolo giacenza",
+          "unit": "Unità di misura",
+          "quantity": "Quantità iniziale",
+          "daily_rate": "Consumo medio giornaliero",
+          "threshold": "Soglia di riordino",
+          "riordino": "Quantità di riordino abituale",
+          "dopo_apertura": "Da consumare entro (dall'apertura)",
+          "preavviso_scadenza": "Avvisa prima della scadenza",
+          "scadenza": "Scadenza della quantità iniziale",
+          "icon": "Icona"
+        },
+        "data_description": {
+          "mode": "A pezzi: scali tu i consumi. A consumo: la giacenza cala da sola in base al consumo medio.",
+          "daily_rate": "Solo per il calcolo a consumo (es. 3 cialde al giorno).",
+          "threshold": "Sotto o pari a questa quantità ricevi l'avviso e il prodotto va in lista della spesa.",
+          "riordino": "Proposta quando registri un acquisto.",
+          "dopo_apertura": "Giorni entro cui consumare una confezione aperta (0 = non si applica).",
+          "preavviso_scadenza": "Giorni prima della data limite di una confezione in cui ricevere l'avviso."
+        }
+      },
+      "modifica_scorta": {
+        "title": "Modifica {nome}",
+        "description": "Cambia la quantità attuale solo per correggere la giacenza (es. dopo aver contato).",
+        "data": {
+          "name": "Nome",
+          "mode": "Calcolo giacenza",
+          "unit": "Unità di misura",
+          "quantity": "Quantità attuale",
+          "daily_rate": "Consumo medio giornaliero",
+          "threshold": "Soglia di riordino",
+          "riordino": "Quantità di riordino abituale",
+          "dopo_apertura": "Da consumare entro (dall'apertura)",
+          "preavviso_scadenza": "Avvisa prima della scadenza",
+          "scadenza": "Scadenza della quantità iniziale",
+          "icon": "Icona"
+        },
+        "data_description": {
+          "mode": "A pezzi: scali tu i consumi. A consumo: la giacenza cala da sola in base al consumo medio.",
+          "daily_rate": "Solo per il calcolo a consumo (es. 3 cialde al giorno).",
+          "threshold": "Sotto o pari a questa quantità ricevi l'avviso e il prodotto va in lista della spesa.",
+          "riordino": "Proposta quando registri un acquisto.",
+          "dopo_apertura": "Giorni entro cui consumare una confezione aperta (0 = non si applica).",
+          "preavviso_scadenza": "Giorni prima della data limite di una confezione in cui ricevere l'avviso."
+        }
+      },
+      "modifica": {
+        "title": "Modifica",
+        "data": {
+          "articolo": "Articolo"
+        }
+      },
+      "elimina": {
+        "title": "Elimina",
+        "description": "Gli articoli selezionati e le loro entità verranno rimossi.",
+        "data": {
+          "articoli": "Articoli"
+        }
+      }
+    },
+    "error": {
+      "nome_vuoto": "Inserisci un nome.",
+      "consumo_richiesto": "Con il calcolo a consumo serve un consumo giornaliero maggiore di zero.",
+      "valore_non_valido": "Controlla i valori inseriti."
+    },
+    "abort": {
+      "nessun_articolo": "Non ci sono ancora articoli."
+    }
+  },
+  "services": {
+    "fatto": {
+      "name": "Segna come fatto",
+      "description": "Promemoria ricorrente: riparte il conteggio. Scadenza singola: viene eliminata.",
+      "fields": {
+        "entity_id": {
+          "name": "Entità",
+          "description": "Una qualsiasi entità dell'articolo."
+        },
+        "item_id": {
+          "name": "ID articolo",
+          "description": "In alternativa all'entità (attributi del sensore riepilogo)."
+        },
+        "data": {
+          "name": "Data",
+          "description": "Quando è stato fatto (predefinito: oggi)."
+        }
+      }
+    },
+    "acquisto": {
+      "name": "Registra acquisto",
+      "description": "Aggiunge una nuova confezione al prodotto.",
+      "fields": {
+        "entity_id": {
+          "name": "Entità",
+          "description": "Una qualsiasi entità dell'articolo."
+        },
+        "item_id": {
+          "name": "ID articolo",
+          "description": "In alternativa all'entità (attributi del sensore riepilogo)."
+        },
+        "quantita": {
+          "name": "Quantità",
+          "description": "Quantità acquistata."
+        },
+        "data": {
+          "name": "Data acquisto",
+          "description": "Predefinito: adesso."
+        },
+        "scadenza": {
+          "name": "Scadenza",
+          "description": "Data di scadenza stampata sulla confezione."
+        }
+      }
+    },
+    "consumo": {
+      "name": "Registra consumo",
+      "description": "Scala una quantità, prima dalle confezioni aperte o in scadenza.",
+      "fields": {
+        "entity_id": {
+          "name": "Entità",
+          "description": "Una qualsiasi entità dell'articolo."
+        },
+        "item_id": {
+          "name": "ID articolo",
+          "description": "In alternativa all'entità (attributi del sensore riepilogo)."
+        },
+        "quantita": {
+          "name": "Quantità",
+          "description": "Quantità consumata."
+        }
+      }
+    },
+    "imposta_giacenza": {
+      "name": "Correggi giacenza",
+      "description": "Imposta la quantità effettivamente presente.",
+      "fields": {
+        "entity_id": {
+          "name": "Entità",
+          "description": "Una qualsiasi entità dell'articolo."
+        },
+        "item_id": {
+          "name": "ID articolo",
+          "description": "In alternativa all'entità (attributi del sensore riepilogo)."
+        },
+        "quantita": {
+          "name": "Quantità",
+          "description": "Quantità presente ora."
+        }
+      }
+    },
+    "apri": {
+      "name": "Apri confezione",
+      "description": "Segna come aperta da oggi una confezione (predefinita: quella che scade prima).",
+      "fields": {
+        "entity_id": {
+          "name": "Entità",
+          "description": "Una qualsiasi entità dell'articolo."
+        },
+        "item_id": {
+          "name": "ID articolo",
+          "description": "In alternativa all'entità (attributi del sensore riepilogo)."
+        },
+        "confezione": {
+          "name": "Confezione",
+          "description": "ID della confezione (attributo confezioni del sensore Giacenza)."
+        }
+      }
+    },
+    "togli_confezione": {
+      "name": "Togli confezione",
+      "description": "Confezione finita o buttata: la toglie dalla giacenza.",
+      "fields": {
+        "entity_id": {
+          "name": "Entità",
+          "description": "Una qualsiasi entità dell'articolo."
+        },
+        "item_id": {
+          "name": "ID articolo",
+          "description": "In alternativa all'entità (attributi del sensore riepilogo)."
+        },
+        "confezione": {
+          "name": "Confezione",
+          "description": "ID della confezione (attributo confezioni del sensore Giacenza)."
+        }
+      }
+    }
+  }
+}

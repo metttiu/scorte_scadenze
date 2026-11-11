@@ -1,0 +1,99 @@
+fatto:
+  fields:
+    entity_id:
+      selector:
+        entity:
+          integration: scorte_scadenze
+    item_id:
+      selector:
+        text:
+    data:
+      selector:
+        date:
+
+acquisto:
+  fields:
+    entity_id:
+      selector:
+        entity:
+          integration: scorte_scadenze
+    item_id:
+      selector:
+        text:
+    quantita:
+      required: true
+      selector:
+        number:
+          min: 0
+          max: 1000000
+          step: any
+          mode: box
+    data:
+      selector:
+        date:
+    scadenza:
+      selector:
+        date:
+
+consumo:
+  fields:
+    entity_id:
+      selector:
+        entity:
+          integration: scorte_scadenze
+    item_id:
+      selector:
+        text:
+    quantita:
+      required: true
+      selector:
+        number:
+          min: 0
+          max: 1000000
+          step: any
+          mode: box
+
+imposta_giacenza:
+  fields:
+    entity_id:
+      selector:
+        entity:
+          integration: scorte_scadenze
+    item_id:
+      selector:
+        text:
+    quantita:
+      required: true
+      selector:
+        number:
+          min: 0
+          max: 1000000
+          step: any
+          mode: box
+
+apri:
+  fields:
+    entity_id:
+      selector:
+        entity:
+          integration: scorte_scadenze
+    item_id:
+      selector:
+        text:
+    confezione:
+      selector:
+        text:
+
+togli_confezione:
+  fields:
+    entity_id:
+      selector:
+        entity:
+          integration: scorte_scadenze
+    item_id:
+      selector:
+        text:
+    confezione:
+      required: true
+      selector:
+        text:
